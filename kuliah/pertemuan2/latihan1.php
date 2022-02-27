@@ -1,10 +1,34 @@
 <?php 
-    // ini adalah komentar (ctrl + /)
-    /* ini juga komentar */
-
     // Pertemuan 2 - PHP Dasar
+    
     // Sintaks PHP
+    // Penulisan sintaks PHP
 
+    // 1. PHP di dalam HTML
+        /* <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Belajar PHP</title>
+        </head>
+        <body>
+            <h1><?php echo "Aufaa"; ?></h1>
+        </body>
+        </html> */
+
+    // 2. HTML di dalam PHP
+        /* <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Belajar PHP/title>
+        </head>
+        <body>
+            <?php "<h1>Aufaa</h1>"; ?> 
+        </body>
+        </html> */
+
+    
     // Standar Output
     // echo, print (digunakan untuk mencetak variable)
     // print_r (untuk mencetak isi array)
@@ -18,37 +42,13 @@
     var_dump("Aufaa Husniati");
     echo "<hr>";
 
-    // Penulisan sintaks PHP
-    // 1. PHP di dalam HTML
-    // <!DOCTYPE html>
-    // <html lang="en">
-    // <head>
-    //     <meta charset="UTF-8">
-    //     <title>Belajar PHP</title>
-    // </head>
-    // <body>
-    //     <?php 
-    //         echo "<h1>Halo nama saya Aufaa</h1>"
-    // </body>
-    // </html>
-
-    // 2. HTML di dalam PHP
-    // <!DOCTYPE html>
-    // <html lang="en">
-    // <head>
-    //     <meta charset="UTF-8">
-    //     <title>Belajar PHP/title>
-    // </head>
-    // <body>
-    //     <h1>Halo, Nama saya <?php echo "Aufaa"; (? >) </h1>
-    // </body>
-    // </html> 
-
     // Nilai: integer, String, boolean
     echo 10;
     echo "<hr>";
+    echo 123;
+    echo "<br>";
 
-    // VARIABEL
+    // VARIABLE (wadah untuk menyimpan nilai)
     // tidak boleh diaawali dengan angka, tapi boleh mengandung angka
     // tidak boleh ada spasi
     $nama = "Aufaa";
@@ -62,8 +62,14 @@
 
     //String
     // '', ""
+    echo "Kamis";
+    echo "<br>";
+    
+    // Mencetak kata yang menggunakan kutip satu
     echo "jum'at";
     echo "<br>";
+
+    // Vice versa
     echo 'Aufaa : "Halo Halo"';
     echo "<hr>";
 
@@ -74,52 +80,67 @@
     echo "Aufaa : \"jum'at\"";
     echo "<br>";
 
-    // INTERPOLASI
-    // mencetak isi variable
-    // hanya bisa digunakan oleh ""
+    // Interpolasi
+    // Mencetak isi variable
+    // Hanya bisa digunakan oleh ""
     echo "Halo nama saya $nama";
     echo "<br>";
     $price = 200;
     echo "Price: $$price";
+    echo "<br>";
+    echo "Price: $200";
     echo "<hr>";
 
-    // OPERATOR 
+    // Operator 
+    // Keyword yang mengoprasikan / memanipulasi nilai
     // Aritmatika
-    // +, -, *, /, % (modulp / modulus / sisa bagi)
+    // +, -, *, /, % (modulo / modulus / sisa bagi)
     echo 1 + 1;
     echo "<br>";
+    echo 1 + 2 * 3 - 4; // KaBaTaKu
+    echo "<br>";
+    echo (1 + 2) * 3 - 4; 
+    echo "<br>";
+    
+    // Dengan Variable
     $alas = 10;
     $tinggi = 20;
     $luas_segi_tiga = ($alas * $tinggi) / 2;
     echo $luas_segi_tiga;
     echo "<br";
     echo 3 % 2;
-    echo "<hr>";
+    $x = 10;
+    $y = 20;
+    echo $x * $y;
     echo "<br>";
+    echo "<hr>";
 
-    // CONCAT
-    // penggabukan Sting
+    // Concat
+    // penggabung String
     // .
-
+    $nama_depan = "Aufaa";
+    $nama_belakang = "Husniati";
+    echo $nama_depan . " " . $nama_belakang;
+    echo "<br>";
+    echo "<hr>";
     $nama_depan = "Aufaa";
     $nama_belakang = "Husniati";
     echo $nama_depan . " " . $nama_belakang;
     echo "<hr>";
 
-    // ASSIGMENT (Nilai sebelumnya tidak akan hilang, tapi ditambah)
+    // Assigment (Nilai sebelumnya tidak akan hilang, tapi ditambah)
     //=, +=, -=, *=, /=, %=, .=
     $x = 1;
     $x += 5;
     echo $x;
     echo "<br>";
-
     $nama = "Aufaa";
     $nama .= " ";
     $nama .= "Husniati";
     echo $nama;
     echo "<hr>";
 
-    // PERBANDINGAN
+    // Perbandingan
     // <, >, <=, >=, ==, !=
     echo 1 < 5;
     echo "<br>";
@@ -129,32 +150,60 @@
     echo "<br>";
     var_dump(1 == 5);
     echo "<br>";
-    var_dump(1 == "1"); // (hasilnya true karena operator perbandingan tidak men-check tipe data, hanya nilai)
+    var_dump(1 == "1"); // (Hasilnya true karena operator perbandingan tidak men-check tipe data, hanya nilai)
     echo "<hr>";
 
-    //IDENTITAS / STRICT COMPARISON
+    // Identitas / Strict Comparison
     //===, !==
     echo 10 === "10";
-    echo "<br>";
     var_dump(1 === "1");
     echo "<hr>";
 
-    // INCREMENT / DECREMENT
-    // penambhaan/ pengurangan
+    // Increment / Decrement
+    // penambahaan / pengurangan
     // ++, --
     $x = 10;
-    $x++; // dicetak dulu baru ditambah
+    $x++; // Dicetak dulu baru ditambah
+    echo $x;
+    echo "<br>";
+    $x--;
     echo $x;
     echo "<br>";
 
-    // bisa juga ++$x;(ditambah dulu baru dicetak)
+    // Bisa juga ++$x;(ditambah dulu baru dicetak)
     echo ++$x;
-    echo $x;
-    echo "<hr>"
+    echo "<br>";
+    echo --$x;
+    echo "<hr>";
 
-    // LOGIKA 
+    // Logika
     // &&, ||, !
-    // $x = 30;
-    // var_dump($x < 20 && $x % 2 == 0);
+    $x = 10;
+    var_dump($x < 20 && $x % 2 == 0);
+    echo "<br>";
 
+    $x = 30;
+    var_dump($x < 20 || $x % 2 == 0);
+    echo "<br>";
+ 
+
+ // NOTES
+
+ // Comment
+    // ini adalah comment
+    /* ini adalah comment */
+
+ // Horizontal line 
+    // echo "<hr>";
+
+ // Break line
+    // echo "<br>";
+
+ // Boolean: true
+    // echo true;
+
+ // Boolean: false
+    // echo false;
  ?>
+
+ 
