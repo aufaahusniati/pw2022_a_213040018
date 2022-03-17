@@ -26,6 +26,7 @@ $angka = [3, 2, 15, 20, 11, 77, 89];
     </style>
 </head>
 <body>
+
     <?php for ($i = 0; $i < (count($angka)); $i++ ) { ?>
         <div class="kotak"><?php echo $angka[$i]; ?></div>
     <?php } ?>
@@ -42,6 +43,7 @@ $angka = [3, 2, 15, 20, 11, 77, 89];
     <?php foreach ($angka as $a) : ?>
         <div class="kotak"><?= $a; ?></div>
     <?php endforeach; ?>
+    
 </body>
 </html>
 

@@ -1,5 +1,5 @@
 <?php 
-// Studi kasus
+// Studi kasus - LURING
 
 $mahasiswa = [
     ["Aufaa", "213040018", "Aufaa@gmail.com", "Teknik Informatika"],
