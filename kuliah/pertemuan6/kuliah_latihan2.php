@@ -19,15 +19,15 @@ $mahasiswa = [
         "jurusan" => "Teknik Informatika",
         "gambar" => "img3.png"],
     [
-        "nama" => "Ainan", 
+        "nama" => "Upeh", 
         "npm" => "213040007", 
-        "email" => "ainan@gmail.com", 
+        "email" => "upeh@gmail.com", 
         "jurusan" => "Teknik Informatika",
         "gambar" => "img4.png"],
     [
-        "nama" => "Wildan", 
+        "nama" => "Husniati", 
         "npm" => "213040001", 
-        "email" => "wildan@gmail.com", 
+        "email" => "husniati@gmail.com", 
         "jurusan" => "Teknik Informatika",
         "gambar" => "img5.png"],
     [
@@ -43,21 +43,21 @@ $mahasiswa = [
         "jurusan" => "Teknik Informatika",
         "gambar" => "img7.png"],
     [
-        "nama" => "Revina", 
+        "nama" => "Pey", 
         "npm" => "213040004", 
-        "email" => "revina@gmail.com", 
+        "email" => "pey@gmail.com", 
         "jurusan" => "Teknik Informatika",
         "gambar" => "img8.png"],
     [
-        "nama" => "Diva", 
+        "nama" => "Legi", 
         "npm" => "213040005", 
-        "email" => "diva@gmail.com", 
+        "email" => "legi@gmail.com", 
         "jurusan" => "Teknik Informatika",
         "gambar" => "img9.png"],
     [
-        "nama" => "Legi", 
+        "nama" => "jekey", 
         "npm" => "213040006", 
-        "email" => "legi@gmail.com", 
+        "email" => "jekey@gmail.com", 
         "jurusan" => "Teknik Informatika",
         "gambar" => "img10.png"]
 
