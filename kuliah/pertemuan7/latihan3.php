@@ -12,7 +12,7 @@
     <h1>Halo, Selamat Datang <?= $_POST["nama"]; ?></h1>
 <?php endif; ?>
 
-<form action="" method="post">
+<form action="latihan4.php" method="post">
     Masukan nama :
     <input type="text" name="nama">
     <br>

@@ -92,7 +92,7 @@ $mahasiswa = [
                             <p class="card-text"><?= $_GET["email"]; ?></p>
                             <p class="card-text"><?= $_GET["jurusan"]; ?></p>
 
-                            <a href="kuliah_latihan3">Kembali</a>
+                            <a href="kuliah_latihan3.php">Kembali</a>
                         </div>
                     </div>
                 </div>
