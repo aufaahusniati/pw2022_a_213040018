@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*navbar*/
+.navbar {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-brand {
+  font-family: "Pacifico", cursive;
+  font-size: 25px;
+}
+
+.nav-item {
+  font-size: 18px;
+  padding-right: 20px;
+}
+.navbar .nav-item.active {
+  font-weight: bold;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.d-flex .btn {
+  font-size: 16px;
+  background-color: #c2b280;
+  border-radius: 50px;
+  color: white;
+  text-transform: uppercase;
+  padding: 9px 14px;
+}
+
+.d-flex .btn:hover {
+  background-color: #406343;
+  color: white;
+  transition: 0.5;
+}
+
+/* data-kategori / data-layanan */
+.texth3 {
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table tr {
+  height: 30px;
+}
+
+.table tr td {
+  padding: 5px 10px;
+}
+
+.input-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+.box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 10px 0 25px 0;
+}
+.section {
+  padding: 25px 0;
+}
+
+/*footer*/
+/* footer {
+  background-color: #406343;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+} */

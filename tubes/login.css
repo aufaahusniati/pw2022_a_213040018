@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#contact {
+  background-image: url("img/login3.svg");
+  background-size: cover;
+  padding: 5rem;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.textcontact h1 {
+  font-family: "Abril Fatface", cursive;
+  letter-spacing: 4px;
+  font-size: 50px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.textcontact {
+  color: #406343;
+}
+
+#contact form .form-label {
+  font-size: 22px;
+}
+#contact form input {
+  border-radius: 0%;
+}
+.textarea {
+  border-radius: 0%;
+}
+
+.d-flex button .btn {
+  font-size: 16px;
+  background-color: #c2b280;
+  border-radius: 50px;
+  color: white;
+  text-transform: uppercase;
+  padding: 9px 14px;
+}
+
+.d-flex .btn:hover {
+  background-color: #406343;
+  color: white;
+  transition: 0.5;
+}
