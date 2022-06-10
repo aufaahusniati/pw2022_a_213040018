@@ -94,7 +94,7 @@ if(isset($_POST["login"])) {
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
       rel="stylesheet"
     />
-    <title>Login || PetCare</title>
+    <title>Login to PetCare</title>
   </head>
   <body>
         
@@ -104,7 +104,7 @@ if(isset($_POST["login"])) {
         <div class="container">
             <div class="row text-center mb-3">
                 <div class="textcontact">
-                    <h1>Login</h1>
+                    <h1>Login to PetCare</h1>
                 </div>
             </div>
 
@@ -114,7 +114,6 @@ if(isset($_POST["login"])) {
 
                 <div class="col-lg-7 d-flex justify-content-center">
                     <div class="col-md-6">
-
                     <?php if(isset($error)) :?>
                       <p style="color: red; font-style: italic;">username / password salah</p>
                     <?php endif; ?>
@@ -134,26 +133,16 @@ if(isset($_POST["login"])) {
                               <label class="form-check-label" for="remember">Remember Me</label>
                             </div>
 
-                            <a href="registrasi.php">Registrasi</a> <br><br>
-
-                            <div class="d-flex">
-                              <button class="btn" type="submit" name="login">Login</button>
-                            </div>
+                            <p>Not on PetCare yet? <a href="registrasi.php"> Registration</a></p>
                             
+                            <div class="d-flex">
+                              <button class="btn btn-success" type="submit" name="login">Login</button>
+                            </div>     
                 </div>
             </div>
         </div>
     </section>
     <!--End Contact-->
-
-    <!--Footer-->
-    <!-- <footer>
-      <div class="container">
-        <small>Copyright &copy; 2022 - PetCare.</small>
-      </div>
-    </footer> -->
-    <!--End footer-->
-    
 
     <!-- Optional JavaScript; choose one of the two! -->
 

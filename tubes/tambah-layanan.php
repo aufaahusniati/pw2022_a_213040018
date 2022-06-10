@@ -7,8 +7,8 @@
     }
 
     require 'functions.php';
-
 ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,7 +20,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!--My CSS-->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <!--Google Font-->
     <!--Pacifio-->
@@ -78,9 +78,6 @@
               <a class="nav-link active" aria-current="page" href="index.php"
                 >Dashboard</a
               >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="profile.php">Profile</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="data-kategori.php">Data Kategori</a>
@@ -179,11 +176,11 @@
         </div>
 
     <!--Footer-->
-    <footer>
-      <div class="container">
-        <small>Copyright &copy; 2022 - PetCare.</small>
-      </div>
-    </footer>
+      <footer>
+        <div class="container">
+          <small>Copyright &copy; 2022 - PetCare.</small>
+        </div>
+      </footer>
     <!--End footer-->
     
     <script>

@@ -1,25 +1,8 @@
 <?php 
-session_start();
-
-if (!isset($_SESSION['login'])) {
-    header('location: login.php');
-    exit;
-}
-
 require 'functions.php';
-$kategori = query("SELECT * FROM kategori");
-
-// tomboh cari ditekan
-if(isset($_GET["cari"])) {
-  $keyword =($_GET["keyword"]);
-
-  $query = "SELECT * FROM kategori
-            WHERE nama_kategori LIKE '%$keyword%'     
-            ";
-  $kategori = query($query);
-}
 
 ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,12 +13,19 @@ if(isset($_GET["cari"])) {
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-     <!--My CSS-->
-     <link rel="stylesheet" href="css/style.css" />
+    <!--My CSS-->
+    <link rel="stylesheet" href="user.css" />
 
-     <!-- Bootstrap icon -->
+    <!-- Bootstrap icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-     
+
+    <!--Font Awesome-->
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    /> -->
+
     <!--Google Font-->
     <!--Pacifio-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -60,13 +50,13 @@ if(isset($_GET["cari"])) {
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
       rel="stylesheet"
     />
-    <title>Data Kategori</title>
+    <title>Dashboard</title>
   </head>
   <body>
-
+        
     <!--Navbar-->
     <nav
-      class="navbar navbar-expand-lg navbar-dark"
+      class="navbar navbar-expand-lg navbar-dark fixed-top"
       style="background-color: #406343"
     >
       <div class="container">
@@ -85,83 +75,72 @@ if(isset($_GET["cari"])) {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.php"
-                >Dashboard</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="data-kategori.php">Data Kategori</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="data-layanan.php">Data Layanan</a>
-            </li>
+              <a class="nav-link active" aria-current="page" href="user.php"
+                >Home</a>
           </ul>
           <form class="d-flex">
-            <a href="logout.php" class="btn">Logout</a>
+            <a href="contact.php" class="btn">Contact us</a>
           </form>
         </div>
       </div>
     </nav>
     <!--End navbar-->
 
-    <!--Content-->
-    <div class="container">
-      <div class="texth3" style="padding-top: 20px;">
-        <h3>Data Kategori</h3>
-      </div>
-      <a href="tambah-kategori.php" class="btn btn-primary" tabindex="-1" role="button"><i class="bi bi-file-earmark-plus"></i>&nbsp;Tambah Data Kategori</a>
-      
-      <!--Cari-->
-      <div class="row mt-4">
-          <div class="col-8">
-            <form action="" method="get">
-              <div class="input-group">
-                <input type="text" class="form-control" name="keyword" id="keyword" autocomplete="off" placeholder="Masukan keyword pencarian.." autofocus>
-                <button class="btn btn-primary" type="submit" id="cari" name="cari">Cari!</button>
+
+        <!--Contact-->
+        <section id="contact">
+      <div class="container">
+        <div class="row text-center mb-3">
+
+          <div class="textcontact">
+            <h1>Contact <span>Me</span></h1>
+          </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-5 justify-content-center d-flex img-contact">
+            <img src="img/email.svg" class="img-fluid" alt="" width="425">
+          </div>
+
+          <div class="col-lg-7 d-flex justify-content-center">
+            <div class="col-md-6">
+              <div class="alert alert-info alert-dismissible fade show my-alert d-none" role="alert">
+                  Thank You! We have received your message.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
+
+            <form name="contact-me">
+              <div class="mb-3">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
+              </div>
+              <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+                  
+              <button type="submit" class="btn">Send</button>
+              </button>
             </form>
           </div>
         </div>
-      <!--End Cari-->
-      
-      <div class="row my-5">
-        <div class="col-sm">
-          <table class="table table-bordered" style="width: 100%;"  >
-            <thead>
-              <tr>
-                <th scope="col">No</th>
-                <th scope="col">Kategori</th>
-                <th scope="col">Aksi</th>  
-              </tr>
-            </thead>
-            <tbody>
-
-            <?php $no = 1; ?>
-            <?php foreach($kategori as $row) { ?>
-              <tr>
-                <td><?= $no++ ?></td>
-                <td><?= $row['nama_kategori'] ?></td>
-                <td>
-                      <a href="ubah-kategori.php?id=<?= $row["id_kategori"] ?>" class="btn btn-danger">Edit</a>
-                      <a href="hapus.php?idk=<?= $row["id_kategori"] ?>" class="btn btn-primary" onclick="return confirm('Apakah Anda yakin ingin menghapus?')">Delete</a>
-                    </td>
-                  </tr>
-              <?php }?>
-              </tbody>
-            </table>
-          </div>
       </div>
-    </div>
-    <!--End Content-->
+    </section>
+    <!--End Contact-->
 
-    <!--Footer-->
-     <footer>
-      <div class="container">
-        <small>Copyright &copy; 2022 - PetCare.</small>
-      </div>
-    </footer>
-    <!--End footer-->
-    
+  
+
+  
+
+
+    <!-- end layanan -->
+    <!-- Footer -->
+
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

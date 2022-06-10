@@ -70,6 +70,7 @@
   margin-bottom: 15px;
   box-sizing: border-box;
 }
+
 .box {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -77,13 +78,7 @@
   box-sizing: border-box;
   margin: 10px 0 25px 0;
 }
+
 .section {
   padding: 25px 0;
 }
-
-/*footer*/
-/* footer {
-  background-color: #406343;
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
-} */

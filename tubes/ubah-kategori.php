@@ -13,13 +13,8 @@ $kategori = mysqli_query($conn, "SELECT * FROM kategori WHERE id_kategori = '".$
         echo '<script>window.location="data-kategori.php"</script>';
     }
     $k = mysqli_fetch_object($kategori);
-    
-// Tombol cari ditekan
-// if(isset($_POST["cari"])) {
-//   $layanan = cari($_POST["keyword"]);
-// }
-
 ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -31,7 +26,7 @@ $kategori = mysqli_query($conn, "SELECT * FROM kategori WHERE id_kategori = '".$
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!--My CSS-->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <!--Google Font-->
     <!--Pacifio-->
@@ -85,9 +80,6 @@ $kategori = mysqli_query($conn, "SELECT * FROM kategori WHERE id_kategori = '".$
               <a class="nav-link active" aria-current="page" href="index.php"
                 >Dashboard</a
               >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="profile.php">Profile</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="data-kategori.php">Data Kategori</a>

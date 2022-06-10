@@ -35,7 +35,7 @@
   border-radius: 0%;
 }
 
-.d-flex button .btn {
+button .d-flex .btn {
   font-size: 16px;
   background-color: #c2b280;
   border-radius: 50px;
@@ -44,7 +44,7 @@
   padding: 9px 14px;
 }
 
-.d-flex .btn:hover {
+button .btn:hover {
   background-color: #406343;
   color: white;
   transition: 0.5;

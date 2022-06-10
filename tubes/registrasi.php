@@ -51,7 +51,7 @@ if(isset($_POST["register"])) {
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
       rel="stylesheet"
     />
-    <title>Hello, world!</title>
+    <title>Registration to PetCare</title>
   </head>
   <body>
         
@@ -60,7 +60,7 @@ if(isset($_POST["register"])) {
         <div class="container">
             <div class="row text-center mb-3">
                 <div class="textcontact">
-                    <h1>Registrasi</h1>
+                    <h1>Registration</h1>
                 </div>
             </div>
 
@@ -87,7 +87,7 @@ if(isset($_POST["register"])) {
                                 <input type="password" class="form-control" id="password2" aria-describedby="email" name="password2">
                             </div>
                                 
-                            <button class="btn btn-primary" type="submit" name="register">Register</button>
+                            <button class="btn btn-success" type="submit" name="register">Registration</button>
                         </form>
                     </div>
                 </div>
