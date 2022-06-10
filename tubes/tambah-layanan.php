@@ -47,9 +47,6 @@
       rel="stylesheet"
     />
 
-    <!--CKEDITOR-->
-    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
-
     <title>Tambah Data Layanan</title>
   </head>
   <body>
@@ -183,10 +180,6 @@
       </footer>
     <!--End footer-->
     
-    <script>
-      CKEDITOR.replace( 'deskripsi' );
-    </script>
-
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

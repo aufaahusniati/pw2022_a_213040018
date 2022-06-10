@@ -89,15 +89,6 @@ require 'functions.php';
     </nav>
     <!--End navbar-->
 
-    <!--Footer-->
-    <footer>
-      <div class="container">
-        <small>Copyright &copy; 2022 - PetCare.</small>
-      </div>
-    </footer>
-    <!--End footer-->
-    
-
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
