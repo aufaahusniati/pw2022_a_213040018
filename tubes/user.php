@@ -1,7 +1,6 @@
 <?php 
 require 'functions.php';
 
-
 $layanan = query("SELECT * FROM layanan LEFT JOIN kategori USING (id_kategori) LIMIT 6");
 ?>
 

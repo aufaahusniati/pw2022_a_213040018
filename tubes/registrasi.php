@@ -4,7 +4,7 @@ require 'functions.php';
 if(isset($_POST["register"])) {
 
     if(registrasi($_POST) > 0) {
-        // header('location: index.php');
+        header('location: index.php');
             echo "<script>
                     alert('User baru berhasil ditambahkan!')
                 </script>";

@@ -136,9 +136,11 @@
 
                             // validasi format file
                             if(!in_array($type2, $tipe_diizinkan)) {
+
                                 // Jika format file tidak ada di dalam tipe diizinkan
                                 echo '<script>("format file tidak diizinkan")</script>';
                             } else {
+
                                 //Jika format file sesuai dengan yang ada di dalam array tipe diizinkan
                                 // proses upload file sekaligus
                                 
@@ -154,14 +156,14 @@
 
                                 if($insert) {
                                   echo "<script>
-                                          alert('data berhasil layanan ditambahkan!');
-                                          document.location.href = 'index.php';
+                                          alert('data layanan berhasil ditambahkan!');
+                                          document.location.href = 'data-layanan.php';
                                         </script>
                                       ";
                                 } else {
                                   echo "<script>
-                                          alert('data gagal ditambahkan!');
-                                          document.location.href = 'index.php';
+                                          alert('data layanan gagal ditambahkan!');
+                                          document.location.href = 'data-layanan.php';
                                       </script>
                                   ";
                                 }

@@ -119,10 +119,17 @@ $kategori = mysqli_query($conn, "SELECT * FROM kategori WHERE id_kategori = '".$
                                       ");
 
                 if($update) {
-                  echo '<script>alert("Ubah data berhasil")</script>';
-                  echo '<script>window.location="data-kategori.php"</script>';
+                  echo "<script>
+                          alert('ubah data layanan berhasil!');
+                          document.location.href = 'data-kategori.php';
+                        </script>
+                      ";
                 } else {
-                  echo 'gagal' .mysqli_error($conn);
+                    echo "<script>
+                            alert('ubah data layanan gagal!');
+                            document.location.href = 'data-kategori.php';
+                          </script>
+                        ";
                 }
               }
             ?>

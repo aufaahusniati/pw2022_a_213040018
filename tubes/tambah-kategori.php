@@ -111,10 +111,17 @@ require 'functions.php';
                                             '".$nama."') ");
 
             if($insert) {
-              echo '<script>alert("Tambah data berhasil")</script>';
-              echo '<script>window.location="data-kategori.php"</script>';
+              echo "<script>
+                      alert('data kategori berhasil ditambahkan!');
+                      document.location.href = 'data-kategori.php';
+                    </script>
+                  ";
             } else {
-              echo 'gagal' .mysqli_error($conn);
+              echo "<script>
+                      alert('data kategori gagal ditambahkan!');
+                      document.location.href = 'date-kategori.php';
+                  </script>
+              ";
             }
           }
         ?>

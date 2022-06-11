@@ -112,7 +112,7 @@ if(isset($_GET["cari"])) {
         <h3>Data Layanan</h3>
       </div>
       <a href="tambah-layanan.php" class="btn btn-primary" tabindex="-1" role="button"><i class="bi bi-file-earmark-plus"></i>&nbsp;Tambah Data Layanan</a>
-      <a href="cetak.php" target="_blank" class="btn btn-danger" tabindex="-1" role="button"><i class="bi bi-file-earmark-pdf"></i>&nbsp;Exporting PDF</a>
+      <a href="cetak.php" target="_blank" class="btn btn-danger" tabindex="-1" role="button"><i class="bi bi-file-earmark-pdf"></i>&nbsp;Export to PDF</a>
       
       <!-- Link Sorting -->
       <?php 

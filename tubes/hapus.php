@@ -11,17 +11,18 @@ require 'functions.php';
 // Hapus Data Kategori
     if(isset($_GET['idk'])) {
         $delete = mysqli_query($conn, "DELETE FROM kategori WHERE id_kategori = '".$_GET['idk']."'");
+        
         echo "
             <script>
                 alert('Data Kategori berhasil dihapus!');
-                document.location.href = 'index.php';    
+                document.location.href = 'data-kategori.php';    
             </script>
         ";
     } else {
         echo "
             <script>
                 alert('Data Kategori gagal dihapus!');
-                document.location.href = 'index.php';    
+                document.location.href = 'data-kategori.php';    
             </script>
         ";
     }
@@ -34,17 +35,18 @@ require 'functions.php';
         unlink('./img/' .$l->gambar);
         
         $delete = mysqli_query($conn, "DELETE FROM layanan WHERE id_layanan = '".$_GET['idl']."' ");
+        
         echo "
             <script>
-                alert('Data Layanan berhasil dihapus!');
-                document.location.href = 'index.php';    
+                alert('Data layanan berhasil dihapus!');
+                document.location.href = 'data-layanan.php';    
             </script>
         ";
     } else {
         echo "
             <script>
-                alert('Data Layanan gagal dihapus!');
-                document.location.href = 'index.php';    
+                alert('Data layanan gagal dihapus!');
+                document.location.href = 'data-layanan.php';    
             </script>
         ";
     }

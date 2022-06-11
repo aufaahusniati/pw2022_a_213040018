@@ -172,10 +172,17 @@ $l = mysqli_fetch_object($layanan);
                                               ");
                 
                 if($update) {
-                  echo '<script>alert("Ubah data layanan berhasil")</script>';
-                  echo '<script>window.location="data-layanan.php"</script>';
+                    echo "<script>
+                            alert('ubah data layanan berhasil!');
+                            document.location.href = 'data-layanan.php';
+                          </script>
+                        ";
                 } else {
-                  echo 'gagal' .mysqli_error($conn);
+                    echo "<script>
+                            alert('ubah data layanan gagal!');
+                            document.location.href = 'data-layanan.php';
+                          </script>
+                        ";
                 }
               }
             ?>
